@@ -122,7 +122,7 @@ function Home() {
             <br /><br />
             <p>Skin Square clinic is a state-of-the-art Dermatology, Aesthetics and Hair Transplantation clinic in Guwahati, Assam bringing advanced skin care to the entire North- East India.</p>
             <br />
-            <p>Skin Square pioneers in providing high quality evidence-based dermatology care, by board certified dermatologists and takes great pride in full filling educational, research and community service missions with excellence. Sit rhoncus .</p>
+            <p>Skin Square pioneers in providing high quality evidence-based dermatology care, by board certified dermatologists and takes great pride in full filling educational, research and community service missions with excellence.</p>
             <NavLink to="/about" className="nav-link" activeClassName="active"> <h5 style={{ color: '#000' }}>Read More</h5></NavLink>
           </div>
         </div>
