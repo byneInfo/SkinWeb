@@ -18,11 +18,12 @@ function About() {
             
             <h5 >
                 
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget
-                risus vitae pellentesque tellus sem mattis. Sed volutpat in
-                urna nunc proin sit curabitur velit tortor. Sollicitudin nulla
-                fermentum est faucibus. Mattis sit ornare neque non arcu
-                proin.
+                Dr. Atul Bothra is a certified Dermatologist and Dermato surgeon practicing in 
+                  Guwahati (and previously Bangalore) .He has completed his MBBS and MD (Dermatology, 
+             Venereology and Leprosy) from Guwahati Medical College, Guwahati, Assam  followed by Fellowship
+                in Dermatosurgery and Hair Transplantation at Cutis Academy of Cutaneous Sciences, Bangalore 
+            under Rajiv Gandhi University of Health Sciences. He is well versed with the various problems related to skin, 
+              hair and nails and also deals with problems related to oral mucosa and genitals, including sexually transmitted diseases.
             </h5><br/><br/>
             <h5 >
               
