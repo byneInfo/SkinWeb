@@ -24,14 +24,16 @@ function About() {
                 in Dermatosurgery and Hair Transplantation at Cutis Academy of Cutaneous Sciences, Bangalore 
             under Rajiv Gandhi University of Health Sciences. He is well versed with the various problems related to skin, 
               hair and nails and also deals with problems related to oral mucosa and genitals, including sexually transmitted diseases.
-            </h5><br/><br/>
+            </h5><br/>
             <h5 >
               
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eget
-                risus vitae pellentesque tellus sem mattis. Sed volutpat in
-                urna nunc proin sit curabitur velit tortor. Sollicitudin nulla
-                fermentum est faucibus. Mattis sit ornare neque non arcu
-                proin.
+               He has a vast knowledge and experience with various dermatological procedures including botox , fillers, 
+                 electrocautery and radiofrequency ablation, procedures involving the nail and mucosa, 
+               skin biopsy and other dermatosurgical procedures. He is specially trained in skin surgeries including hair 
+               transplantation, vitiligo surgeries, mole and cyst removals, scars and keloids treatment, fat transfer, 
+                 acne scar management, thread lift etc. He is an expert in the usage of LASER technology  for dermatological 
+                 and cosmetological procedures. Dr. Atul Bothra also has great experience with the various aesthetic procedures for 
+                   treatment of skin problems and hair issues. He is always eager to learn the newer therapies available to address the problems of the patients better.
             </h5>
             </Col>
         </div>
