@@ -34,7 +34,9 @@ function About() {
                  acne scar management, thread lift etc. He is an expert in the usage of LASER technology  for dermatological 
                  and cosmetological procedures. Dr. Atul Bothra also has great experience with the various aesthetic procedures for 
                    treatment of skin problems and hair issues. He is always eager to learn the newer therapies available to address the problems of the patients better.
-            </h5>
+            </h5></br>
+              <h5>Dr. Atul Bothra has several laurels to his name including awards at zonal and national levels and has 13 international and national publications. 
+              He has also written chapters for 4 reputed national books including ACS(I) textbook of Dermatosurgery</h5>
             </Col>
         </div>
         <br />
