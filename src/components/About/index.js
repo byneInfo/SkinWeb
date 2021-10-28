@@ -9,8 +9,8 @@ function About() {
       <Container style={{marginTop:'0px'}} style={{marginTop:'150px'}}>
         <div className="page-title">
         <p className="title">Dr. Atul Bothra - Chief Dermatologist and Hair Transplant Surgeon </p>
-              <h1 className="heading">MBBS , MD (Dermatology and Venereology and Leprosy) – Gold Medalist</h1>
-              <h1 className="heading">FRGUHS (Dermatosurgery and Hair transplantation)</h1>
+              <h5 className="heading">MBBS , MD (Dermatology and Venereology and Leprosy) – Gold Medalist</h5>
+              <h5 className="heading">FRGUHS (Dermatosurgery and Hair transplantation)</h5>
         </div><br/>
         <div className="aboutFeature">
             <img src={GroupGirl} alt="" style={{width:'30vw',}}/>
