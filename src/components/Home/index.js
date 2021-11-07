@@ -147,13 +147,13 @@ function Home() {
           </div>
           <Col lg={6}>
             <div className="h-100 d-inline-block d-flex flex-column justify-content-center p-5">
-              <h5>Wade Warren</h5>
-              <small className="text-muted">Doctor</small>
+              <h5>Dr. Atul Bothra</h5>
+              <small className="text-muted">Chief Dermatologist and Hair Transplant Surgeon</small>
               <p className="mt-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Scelerisque non hendrerit convallis mattis pharetra, sed
-                facilisi. Nulla facilisis viverra leo egestas hendrerit
-                urna.
+                certified Dermatologist and Dermatosurgeon 
+                practicing in Guwahati (and previously Bangalore). Completed MBBS and MD 
+                (Dermatology, Venereology and Leprosy) 
+                from Gauhati Medical College, Guwahati, Assam.
               </p>
             </div>
           </Col>
@@ -162,13 +162,12 @@ function Home() {
 
           <Col lg={6}>
             <div className="h-100 d-inline-block d-flex flex-column justify-content-center p-5">
-              <h5>Wade Warren</h5>
-              <small className="text-muted">Doctor</small>
+              <h5>Dr. Seujee Das</h5>
+              <small className="text-muted">Visiting Clinical Dermatologist</small>
               <p className="mt-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Scelerisque non hendrerit convallis mattis pharetra, sed
-                facilisi. Nulla facilisis viverra leo egestas hendrerit
-                urna.
+                Vast knowledge and experience with various dermatological 
+                disorders including psoriasis and papulosquamous disorders, 
+                autoimmune disorders, cutaneous infections, trichology, connective tissue disorders etc.
               </p>
             </div>
           </Col>
@@ -190,13 +189,12 @@ function Home() {
           </div>
           <Col lg={6}>
             <div className="h-100 d-inline-block d-flex flex-column justify-content-center p-5">
-              <h5>Wade Warren</h5>
-              <small className="text-muted">Doctor</small>
+              <h5>Dr. Anshu Maheswari</h5>
+              <small className="text-muted">Lead Dermatologist and Aesthetic Physician</small>
               <p className="mt-3">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Scelerisque non hendrerit convallis mattis pharetra, sed
-                facilisi. Nulla facilisis viverra leo egestas hendrerit
-                urna.
+                Vast knowledge and experience with various dermatological procedures 
+                including botox , fillers and thread lifts , electrocautery and 
+                radiofrequency ablation.
               </p>
             </div>
           </Col>
