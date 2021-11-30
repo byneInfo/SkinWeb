@@ -74,7 +74,9 @@ textarea {
   margin-top: 100px;
 }
 .btn-floating {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 10px;
   cursor: pointer;
   border-radius: 50%;
@@ -82,8 +84,8 @@ textarea {
   color: #19202c !important;
   width: 36.15385px;
   height: 36.15385px;
-  padding-left: 11px;
-  padding-top: 5px;
+  /* padding-left: 11px;
+  padding-top: 5px; */
 }
 .subInput {
   height: 60px;

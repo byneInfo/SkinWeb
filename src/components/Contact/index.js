@@ -27,17 +27,16 @@ function Contact(props) {
             <Container className="p-5">
               <div className="">
                 <i className="far fa-envelope fa-2x text-black mb-5"></i>
-                <p>skinsquare@gmial.com</p>
-                <p>skinsquare@gmial.com</p>
+                <p>skinsquareclinic@gmail.com</p>
               </div>
               <div className="">
                 <img src={CallLogo} alt="call" className="mb-5 img-fluid" />
-                <p>+91 9876543210</p>
-                <p>+91 9876543210</p>
+                <p>+91 6901625075</p>
               </div>
               <div className="">
                 <i class="fas fa-map-marker-alt fa-2x text-black mb-5"></i>
-                <p>4517 Washington Ave. Manchester, Kentucky 39495</p>
+                <p>Skin Square Clinic DD Tower, 2nd floor, Mahatma Gandhi Path,
+                Ganeshguri, Guwahati, Assam 7810055</p>
               </div>
             </Container>
           </Col>
@@ -90,7 +89,10 @@ function Contact(props) {
         </Row>
       </Container>
       <div className="mt-5 mb-5">
-      <iframe src="https://www.google.com/maps/d/embed?mid=1YQLO70Ay9Fhkttgn-AXCp_IFZyo" width="100%" height="500px"></iframe>
+        {/* <iframe src="https://www.google.com/maps/d/embed?mid=1YQLO70Ay9Fhkttgn-AXCp_IFZyo" width="100%" height="500px"></iframe> */}
+
+        <iframe width="100%" height="500px" id="gmap_canvas" src="https://maps.google.com/maps?q=Dd%20tower%20,mahtma%20Gandhi%20path,ganeshguri%20&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+
         {/* <img src={MapLogo} alt="mapLogo" height="796" className="w-100" /> */}
       </div>
       {/* <div style={{ height: "100vh", width: "100%" }}>

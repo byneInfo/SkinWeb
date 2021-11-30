@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Container, Col, Card, ListGroup } from "react-bootstrap";
 import ServiceDetailsLogo from "../Images/service-details.png";
+import { NavLink } from "react-router-dom";
 
 function ServiceDetails() {
   return (
@@ -68,12 +69,18 @@ function ServiceDetails() {
                 <b>Other Service</b>
               </Card.Header>
               <ListGroup variant="flush">
+              <NavLink
+                  to="/services"
+                  className="nav-link"
+                  activeClassName="active"
+                >
                 <ListGroup.Item>Hair Transplant Treatment</ListGroup.Item>
                 <ListGroup.Item>
                   DMC- RRT (R) Root Restore Therapy
                 </ListGroup.Item>
                 <ListGroup.Item>Lip Pigmentation</ListGroup.Item>
                 <ListGroup.Item>Collagen Induction Therapy</ListGroup.Item>
+                </NavLink>
               </ListGroup>
             </Card>
           </Col>

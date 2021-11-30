@@ -1,3 +1,5 @@
+import axios from 'axios'
+
 export const EnviornmentTypes = {
   DEV: "development",
   PROD: "production"
@@ -13,3 +15,10 @@ data = {
 };
 
 export const AppConfig = data;
+
+export const api = axios.create({
+  baseURL: 'https://skin-sepia.herokuapp.com/api/v1',
+  headers: {
+    "Content-Type": "application/json",
+  },
+})

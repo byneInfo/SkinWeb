@@ -11,24 +11,24 @@ function Blogs() {
     <>
       <Container style={{marginTop:'120px'}}>
         <Row>
-          <Col lg={5}>
+          <Col /*lg={5}*/>
             <div className="page-title">
               <p className="title">Blog</p>
               <h1 className="heading">Our Gallery</h1>
             </div>
           </Col>
-          <Col lg={7}>
+          {/* <Col lg={7}>
             <div className="page-title">
               <img src={BlogsLogo} alt="BlogsLogo" className='img-fluid' />
             </div>
-          </Col>
+          </Col> */}
         </Row>
         <Row>
-          <Col lg={8}>
-            <Row className="g-4">
+          <Col>
+            <Row /*className="g-4"*/>
               {Array.from({ length: 6 }).map((_, idx) => (
-                <Col lg={6}>
-                  <Card style={{boxShadow: "0px 23px 53px rgba(0, 0, 0, 0.12)"}}>
+                <Col lg={4}>
+                  <Card style={{boxShadow: "0px 23px 53px rgba(0, 0, 0, 0.12)",marginBottom:"1rem"}}>
                     <Card.Img variant="top" src={Blog} className="rounded" />
                     <NavLink to="/blogs/blog-details"> <Card.Body style={{color:'#000'}}>
                       <Card.Title classNam="form-label" >
@@ -49,7 +49,7 @@ function Blogs() {
               ))}
             </Row>
           </Col>
-          <Col lg={4}>
+          {/* <Col lg={4}>
             <Card>
               <Card.Header>
                 <h5>Letest Post</h5>
@@ -73,7 +73,7 @@ function Blogs() {
                 </ListGroup.Item>
               </ListGroup>
             </Card>
-          </Col>
+          </Col> */}
         </Row>
       </Container>
     </>

@@ -1,7 +1,7 @@
 import React from "react";
 import { Row, Container, Col, Card, ListGroup } from "react-bootstrap";
 import BlogDetailsLogo from "../Images/blog-details.png";
-import Bloger from "../Images/bloger.png";
+// import Bloger from "../Images/bloger.png";
 
 function BlogDetails() {
   return (
@@ -12,7 +12,7 @@ function BlogDetails() {
       </div>
       <Container className="my-5">
         <Row>
-          <Col lg={8}>
+          <Col /*lg={6}*/>
             <img
               src={BlogDetailsLogo}
               alt="BlogDetailsLogo"
@@ -30,7 +30,7 @@ function BlogDetails() {
               </small>
             </div>
           </Col>
-          <Col lg={4}>
+          {/* <Col lg={4}>
             <Card className="mt-3">
               <Card.Header>
                 <h5>Letest Post</h5>
@@ -54,10 +54,10 @@ function BlogDetails() {
                 </ListGroup.Item>
               </ListGroup>
             </Card>
-          </Col>
+          </Col> */}
         </Row>
         <Row>
-          <Col lg={8}>
+          <Col /*lg={10}*/>
             <div className="mx-4 my-4">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -84,14 +84,14 @@ function BlogDetails() {
                 Tristique commodo donec nullam habitant integer massa.
               </p>
             </div>
-            <img
+            {/* <img
               src={BlogDetailsLogo}
               alt="BlogDetailsLogo"
               width="770"
               height="475"
               className="img-fluid"
 
-            />
+            /> */}
             <div className="mx-4 my-4">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Viverra

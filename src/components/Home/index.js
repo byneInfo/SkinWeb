@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-
+import "./home.css";
 import Slider from "react-slick";
 import {
   Row,
@@ -21,10 +21,11 @@ import TreatImg4 from "../Images/treat4.png";
 import TreatImg5 from "../Images/treat5.png";
 import UserImg from "../Images/user-image.png";
 import Blog from "../Images/blog.png";
-import Doctor from "../Images/doctor.png";
+// import Doctor from "../Images/doctor.png";
+import Atul from "../Images/atul.png";
+import Anshu from "../Images/anshu.png";
+import Seujee from "../Images/seujee.png";
 // import "./home.css";
-
-
 
 function Home() {
   const settings = {
@@ -44,29 +45,50 @@ function Home() {
 
   return (
     <>
-      <Slider {...settings} style={{ marginTop: '100px' }}>
-        <div className="silderImg" >
+      <Slider {...settings} style={{ marginTop: "100px" }}>
+        <div className="silderImg">
           <img src={Banner} alt="Banner" className="img-fluid w-100" />
           <div className="sliderTxt">
-            <h4 style={{ color: '#FFE484' }}>Skin square 1</h4>
-            <h1 style={{}}>We offer more <br /><span style={{ color: '#000', background: '#FFE484' }}> possibilities</span> to meet <br />
-              your every need  </h1>
+            <h4 style={{ color: "#FFE484" }}>Skin square 1</h4>
+            <h1 style={{}}>
+              We offer more <br />
+              <span style={{ color: "#000", background: "#FFE484" }}>
+                {" "}
+                possibilities
+              </span>{" "}
+              to meet <br />
+              your every need{" "}
+            </h1>
           </div>
         </div>
         <div>
           <img src={Banner} alt="Banner" className="img-fluid w-100" />
           <div className="sliderTxt">
-            <h4 style={{ color: '#FFE484' }}>Skin square 2</h4>
-            <h1 style={{}}>We offer more <br /><span style={{ color: '#000', background: '#FFE484' }}> possibilities</span> to meet <br />
-              your every need  </h1>
+            <h4 style={{ color: "#FFE484" }}>Skin square 2</h4>
+            <h1 style={{}}>
+              We offer more <br />
+              <span style={{ color: "#000", background: "#FFE484" }}>
+                {" "}
+                possibilities
+              </span>{" "}
+              to meet <br />
+              your every need{" "}
+            </h1>
           </div>
         </div>
         <div>
           <img src={Banner} alt="Banner" className="img-fluid w-100" />
           <div className="sliderTxt">
-            <h4 style={{ color: '#FFE484' }}>Skin square 3</h4>
-            <h1 style={{}}>We offer more <br /><span style={{ color: '#000', background: '#FFE484' }}> possibilities</span> to meet <br />
-              your every need  </h1>
+            <h4 style={{ color: "#FFE484" }}>Skin square 3</h4>
+            <h1 style={{}}>
+              We offer more <br />
+              <span style={{ color: "#000", background: "#FFE484" }}>
+                {" "}
+                possibilities
+              </span>{" "}
+              to meet <br />
+              your every need{" "}
+            </h1>
           </div>
         </div>
       </Slider>
@@ -77,136 +99,175 @@ function Home() {
         </p>
         <h3 className="text-center">Our Popular Treatments</h3>
         <div className="treatMentCard">
-          <div className='tcrow '>
-            <img src={TreatImg1} alt="treatment" className="tcardImg img-fluid" />
+          <div className="tcrow ">
+            <img
+              src={TreatImg1}
+              alt="treatment"
+              className="tcardImg img-fluid"
+            />
             <div class="overlay">
-              <h4>Anti Ageing Therapies</h4> </div>
+              <h4>Anti Ageing Therapies</h4>{" "}
+            </div>
           </div>
-          <div className='tcrow '>
-            <img src={TreatImg5} alt="treatment" className="tcardImg img-fluid" />
+          <div className="tcrow ">
+            <img
+              src={TreatImg5}
+              alt="treatment"
+              className="tcardImg img-fluid"
+            />
             <div class="overlay">
-              <h4>Anti Ageing Therapies</h4> </div>
+              <h4>Anti Ageing Therapies</h4>{" "}
+            </div>
           </div>
-          <div className='tcrow '>
-            <img src={TreatImg2} alt="treatment" className="tcardImg img-fluid" />
+          <div className="tcrow ">
+            <img
+              src={TreatImg2}
+              alt="treatment"
+              className="tcardImg img-fluid"
+            />
             <div class="overlay">
-              <h4>Anti Ageing Therapies</h4>  </div>
+              <h4>Anti Ageing Therapies</h4>{" "}
+            </div>
           </div>
-          </div> 
-          <div className="treatMentCard">
-
-          <div className='tcrow '>
-            <img src={TreatImg3} alt="treatment" className="tcardImg img-fluid" />
-            <div class="overlay">
-              <h4>Anti Ageing Therapies</h4>  </div>
-          </div>
-          <div className='tcrow '>
-            <img src={TreatImg4} alt="treatment" className="tcardImg img-fluid" />
-            <div class="overlay">
-              <h4>Anti Ageing Therapies</h4>  </div>
-          </div>
-          <div className='tcrow '>
-            <img src={TreatImg5} alt="treatment" className="tcardImg img-fluid" />
-            <div class="overlay">
-              <h4>Anti Ageing Therapies</h4> </div>
-          </div> 
         </div>
-      </section><br /><br /><br />
+        <div className="treatMentCard">
+          <div className="tcrow ">
+            <img
+              src={TreatImg3}
+              alt="treatment"
+              className="tcardImg img-fluid"
+            />
+            <div class="overlay">
+              <h4>Anti Ageing Therapies</h4>{" "}
+            </div>
+          </div>
+          <div className="tcrow ">
+            <img
+              src={TreatImg4}
+              alt="treatment"
+              className="tcardImg img-fluid"
+            />
+            <div class="overlay">
+              <h4>Anti Ageing Therapies</h4>{" "}
+            </div>
+          </div>
+          <div className="tcrow ">
+            <img
+              src={TreatImg5}
+              alt="treatment"
+              className="tcardImg img-fluid"
+            />
+            <div class="overlay">
+              <h4>Anti Ageing Therapies</h4>{" "}
+            </div>
+          </div>
+        </div>
+      </section>
+      <br />
+      <br />
+      <br />
       {/* about us  */}
-      <section className='aboutUs'  >
+      <section className="aboutUs">
         <br />
-        <div className='aboutContainer'>
-          <div className='aboutText'>
+        <div className="aboutContainer">
+          <div className="aboutText">
             <h4>About Us</h4>
-            <h1>Meet the clinical dermatology & cosmetic dermatology  specialist</h1>
-            <br /><br />
-            <p>Skin Square clinic is a state-of-the-art Dermatology, Aesthetics and Hair Transplantation clinic in Guwahati, Assam bringing advanced skin care to the entire North- East India.</p>
+            <h1>
+              Meet the clinical dermatology & cosmetic dermatology specialist
+            </h1>
             <br />
-            <p>Skin Square pioneers in providing high quality evidence-based dermatology care, by board certified dermatologists and takes great pride in full filling educational, research and community service missions with excellence.</p>
-            <NavLink to="/about" className="nav-link" activeClassName="active"> <h5 style={{ color: '#000' }}>Read More</h5></NavLink>
+            <br />
+            <p>
+              Skin Square clinic is a state-of-the-art Dermatology, Aesthetics
+              and Hair Transplantation clinic in Guwahati, Assam bringing
+              advanced skin care to the entire North- East India.
+            </p>
+            <br />
+            <p>
+              Skin Square pioneers in providing high quality evidence-based
+              dermatology care, by board certified dermatologists and takes
+              great pride in full filling educational, research and community
+              service missions with excellence.
+            </p>
+            <NavLink to="/about" className="nav-link" activeClassName="active">
+              {" "}
+              <h5 style={{ color: "#000" }}>Read More</h5>
+            </NavLink>
           </div>
         </div>
       </section>
 
       {/* about us end  */}
-     
+
       {/* our team  */}
-      <section id='ourTeam'>
+      <section id="ourTeam">
         <p className="text-center">
           <b>---Our Team---</b>
         </p>
         <h3 className="text-center">We Have Some Awsome People</h3>
-        <br /><br />
+        <br />
+        <br />
         <div className="teamRow">
-          <div >
-            <img
-              src={Doctor}
-              alt="Doctor"
-              className="team-img img-fluid"
-            />
+          <div className="doctorImg">
+            <img src={Atul} alt="Doctor" className="team-img img-fluid" />
           </div>
           <Col lg={6}>
             <div className="h-100 d-inline-block d-flex flex-column justify-content-center p-5">
               <h5>Dr. Atul Bothra</h5>
-              <small className="text-muted">Chief Dermatologist and Hair Transplant Surgeon</small>
+              <small className="text-muted">
+                Chief Dermatologist and Hair Transplant Surgeon
+              </small>
               <p className="mt-3">
-                certified Dermatologist and Dermatosurgeon 
-                practicing in Guwahati (and previously Bangalore). Completed MBBS and MD 
-                (Dermatology, Venereology and Leprosy) 
-                from Gauhati Medical College, Guwahati, Assam.
+                certified Dermatologist and Dermatosurgeon practicing in
+                Guwahati (and previously Bangalore). Completed MBBS and MD
+                (Dermatology, Venereology and Leprosy) from Gauhati Medical
+                College, Guwahati, Assam.
               </p>
             </div>
           </Col>
         </div>
-        <div className="teamRow" style={{ flexWrap: 'wrap-reverse' }}>
-
-          <Col lg={6}>
-            <div className="h-100 d-inline-block d-flex flex-column justify-content-center p-5">
-              <h5>Dr. Seujee Das</h5>
-              <small className="text-muted">Visiting Clinical Dermatologist</small>
-              <p className="mt-3">
-                Vast knowledge and experience with various dermatological 
-                disorders including psoriasis and papulosquamous disorders, 
-                autoimmune disorders, cutaneous infections, trichology, connective tissue disorders etc.
-              </p>
-            </div>
-          </Col>
-          <div >
-            <img
-              src={Doctor}
-              alt="Doctor"
-              className="team-img img-fluid"
-            />
-          </div>
-        </div>
-        <div className="teamRow">
-          <div >
-            <img
-              src={Doctor}
-              alt="Doctor"
-              className="team-img img-fluid"
-            />
-          </div>
+        <div className="teamRow" style={{ flexWrap: "wrap-reverse" }}>
           <Col lg={6}>
             <div className="h-100 d-inline-block d-flex flex-column justify-content-center p-5">
               <h5>Dr. Anshu Maheswari</h5>
-              <small className="text-muted">Lead Dermatologist and Aesthetic Physician</small>
+              <small className="text-muted">
+                Lead Dermatologist and Aesthetic Physician
+              </small>
               <p className="mt-3">
-                Vast knowledge and experience with various dermatological procedures 
-                including botox , fillers and thread lifts , electrocautery and 
-                radiofrequency ablation.
+                Vast knowledge and experience with various dermatological
+                procedures including botox , fillers and thread lifts ,
+                electrocautery and radiofrequency ablation.
+              </p>
+            </div>
+          </Col>
+          <div className="doctorImgRight">
+            <img src={Anshu} alt="Doctor" className="team-img img-fluid" />
+          </div>
+        </div>
+        <div className="teamRow">
+          <div className="doctorImg">
+            <img src={Seujee} alt="Doctor" className="team-img img-fluid" />
+          </div>
+          <Col lg={6}>
+            <div className="h-100 d-inline-block d-flex flex-column justify-content-center p-5">
+              <h5>Dr. Seujee Das</h5>
+              <small className="text-muted">
+                Visiting Clinical Dermatologist
+              </small>
+              <p className="mt-3">
+                Vast knowledge and experience with various dermatological
+                disorders including psoriasis and papulosquamous disorders,
+                autoimmune disorders, cutaneous infections, trichology,
+                connective tissue disorders etc.                
               </p>
             </div>
           </Col>
         </div>
-
       </section>
 
       {/*end of our team  */}
 
       {/* contact map   */}
-
-
 
       {/*end of  contact map   */}
 
@@ -217,10 +278,12 @@ function Home() {
         <h3 className="text-center">Feel Free To Contact With Us</h3>
         <div className="contact-div mt-5">
           <div>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235527.45446938823!2d75.72376397472755!3d22.72391173166939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fcad1b410ddb%3A0x96ec4da356240f4!2sIndore%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1631338520599!5m2!1sen!2sin" allowfullscreen="" loading="lazy" className='map'></iframe>
+          {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235527.45446938823!2d75.72376397472755!3d22.72391173166939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fcad1b410ddb%3A0x96ec4da356240f4!2sIndore%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1631338520599!5m2!1sen!2sin" allowfullscreen="" loading="lazy" className='map'></iframe> */}
+          <iframe  src="https://maps.google.com/maps?q=Dd%20tower%20,mahtma%20Gandhi%20path,ganeshguri%20&t=&z=13&ie=UTF8&iwloc=&output=embed"
+               allowfullscreen="" loading="lazy" className='map'></iframe>
           </div>
           <Card className="contanctForm">
-            <h1 style={{ margin: '50px 50px -40px 50px' }}>Get In Touch</h1>
+            <h1 style={{ margin: "50px 50px -40px 50px" }}>Get In Touch</h1>
 
             <div className="mt-5">
               <FloatingLabel
@@ -266,9 +329,7 @@ function Home() {
                 Send Message
               </Button>
             </div>
-
           </Card>
-
         </div>
       </div>
       <Container>
@@ -314,22 +375,31 @@ function Home() {
           <Row className="my-3 g-4">
             {Array.from({ length: 3 }).map((_, idx) => (
               <Col lg={4}>
-                <Card style={{ boxShadow: "0px 23px 53px rgba(0, 0, 0, 0.12)" }}>
+                <Card
+                  style={{ boxShadow: "0px 23px 53px rgba(0, 0, 0, 0.12)" }}
+                >
                   <Card.Img variant="top" src={Blog} className="rounded" />
-                  <NavLink to="/blogs" className="nav-link" activeClassName="active">   <Card.Body style={{ color: '#000' }}>
-                    <Card.Title classNam="form-label">
-                      Questions every man wants to ask a dermatologist
-                    </Card.Title>
-                    <Card.Text className="mt-3">
-                      <small>
-                        <i class="fas fa-stopwatch"></i> January 25, 2021
-                      </small>
-                      &nbsp;&nbsp;
-                      <small>
-                        <i class="far fa-user"></i> Cristofer Westervelt
-                      </small>
-                    </Card.Text>
-                  </Card.Body></NavLink>
+                  <NavLink
+                    to="/blogs"
+                    className="nav-link"
+                    activeClassName="active"
+                  >
+                    {" "}
+                    <Card.Body style={{ color: "#000" }}>
+                      <Card.Title classNam="form-label">
+                        Questions every man wants to ask a dermatologist
+                      </Card.Title>
+                      <Card.Text className="mt-3">
+                        <small>
+                          <i class="fas fa-stopwatch"></i> January 25, 2021
+                        </small>
+                        &nbsp;&nbsp;
+                        <small>
+                          <i class="far fa-user"></i> Cristofer Westervelt
+                        </small>
+                      </Card.Text>
+                    </Card.Body>
+                  </NavLink>
                 </Card>
               </Col>
             ))}
