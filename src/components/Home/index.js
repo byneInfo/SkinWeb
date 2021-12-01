@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import "./home.css";
 import Slider from "react-slick";
@@ -26,8 +26,13 @@ import Atul from "../Images/atul.png";
 import Anshu from "../Images/anshu.png";
 import Seujee from "../Images/seujee.png";
 // import "./home.css";
+import { api } from '../../config'
 
 function Home() {
+
+  const [treatments, setTreatments] = useState([])
+  const [testimonials, setTestimonials] = useState([])
+
   const settings = {
     dots: true,
     fade: true,
@@ -42,6 +47,25 @@ function Home() {
     pauseOnHover: true,
     swipeToSlide: true,
   };
+
+  useEffect(() => {
+    getTreatments()
+    getTestimonials()
+  }, [])
+
+  const getTreatments = () => {
+    api
+      .get('/treatments')
+      .then(response => setTreatments(response.data.data.treatments))
+      .catch(error => console.log(error.response.data.message))
+  }
+
+  const getTestimonials = () => {
+    api
+      .get('/testimonials')
+      .then(response => setTestimonials(response.data.data.testimonials))
+      .catch(error => console.log(error.response.data.message))
+  }
 
   return (
     <>
@@ -99,68 +123,20 @@ function Home() {
         </p>
         <h3 className="text-center">Our Popular Treatments</h3>
         <div className="treatMentCard">
-          <div className="tcrow ">
-            <img
-              src={TreatImg1}
-              alt="treatment"
-              className="tcardImg img-fluid"
-            />
-            <div class="overlay">
-              <h4>Anti Ageing Therapies</h4>{" "}
-            </div>
-          </div>
-          <div className="tcrow ">
-            <img
-              src={TreatImg5}
-              alt="treatment"
-              className="tcardImg img-fluid"
-            />
-            <div class="overlay">
-              <h4>Anti Ageing Therapies</h4>{" "}
-            </div>
-          </div>
-          <div className="tcrow ">
-            <img
-              src={TreatImg2}
-              alt="treatment"
-              className="tcardImg img-fluid"
-            />
-            <div class="overlay">
-              <h4>Anti Ageing Therapies</h4>{" "}
-            </div>
-          </div>
-        </div>
-        <div className="treatMentCard">
-          <div className="tcrow ">
-            <img
-              src={TreatImg3}
-              alt="treatment"
-              className="tcardImg img-fluid"
-            />
-            <div class="overlay">
-              <h4>Anti Ageing Therapies</h4>{" "}
-            </div>
-          </div>
-          <div className="tcrow ">
-            <img
-              src={TreatImg4}
-              alt="treatment"
-              className="tcardImg img-fluid"
-            />
-            <div class="overlay">
-              <h4>Anti Ageing Therapies</h4>{" "}
-            </div>
-          </div>
-          <div className="tcrow ">
-            <img
-              src={TreatImg5}
-              alt="treatment"
-              className="tcardImg img-fluid"
-            />
-            <div class="overlay">
-              <h4>Anti Ageing Therapies</h4>{" "}
-            </div>
-          </div>
+          {
+            treatments.map(treatment => (
+              <div key={treatment._id} className="tcrow">
+                <img
+                  src={`https://skin-sepia.herokuapp.com${treatment.imageUrl}`}
+                  alt={treatment.altText}
+                  className="tcardImg img-fluid"
+                />
+                <div class="overlay">
+                  <h4>{treatment.title}</h4>{" "}
+                </div>
+              </div>
+            ))
+          }
         </div>
       </section>
       <br />
@@ -258,7 +234,7 @@ function Home() {
                 Vast knowledge and experience with various dermatological
                 disorders including psoriasis and papulosquamous disorders,
                 autoimmune disorders, cutaneous infections, trichology,
-                connective tissue disorders etc.                
+                connective tissue disorders etc.
               </p>
             </div>
           </Col>
@@ -278,9 +254,9 @@ function Home() {
         <h3 className="text-center">Feel Free To Contact With Us</h3>
         <div className="contact-div mt-5">
           <div>
-          {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235527.45446938823!2d75.72376397472755!3d22.72391173166939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fcad1b410ddb%3A0x96ec4da356240f4!2sIndore%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1631338520599!5m2!1sen!2sin" allowfullscreen="" loading="lazy" className='map'></iframe> */}
-          <iframe  src="https://maps.google.com/maps?q=Dd%20tower%20,mahtma%20Gandhi%20path,ganeshguri%20&t=&z=13&ie=UTF8&iwloc=&output=embed"
-               allowfullscreen="" loading="lazy" className='map'></iframe>
+            {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235527.45446938823!2d75.72376397472755!3d22.72391173166939!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3962fcad1b410ddb%3A0x96ec4da356240f4!2sIndore%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1631338520599!5m2!1sen!2sin" allowfullscreen="" loading="lazy" className='map'></iframe> */}
+            <iframe src="https://maps.google.com/maps?q=Dd%20tower%20,mahtma%20Gandhi%20path,ganeshguri%20&t=&z=13&ie=UTF8&iwloc=&output=embed"
+              allowfullscreen="" loading="lazy" className='map'></iframe>
           </div>
           <Card className="contanctForm">
             <h1 style={{ margin: "50px 50px -40px 50px" }}>Get In Touch</h1>
@@ -341,23 +317,21 @@ function Home() {
           <br /> <br />
           <div className="my-5 mx-5">
             <Row className="g-5">
-              {Array.from({ length: 2 }).map((_, idx) => (
-                <Col lg={6} md={6}>
+              {testimonials.map(testimonial => (
+                <Col key={testimonial._id} lg={6} md={6}>
                   <Card className="position-relative border border-light">
                     <Card.Img
                       variant="top"
-                      src={UserImg}
+                      src={`https://skin-sepia.herokuapp.com${testimonial.imageUrl}`}
                       className="user-img"
                     />
                     <Card.Body style={{ boxShadow: " 0px 100px 80px rgba(0, 0, 0, 0.02), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481), 0px 20px 13px rgba(0, 0, 0, 0.01), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481)" }}>
                       <Card.Text className="p-3" >
-                        “Lorem ipsum dolor sit amet, consectetur adipiscing
-                        elit. Leo a sem sed nibh netus morbi auctor nam
-                        suscipit. Nisl, id ut eget nullam.”
+                        “{testimonial.comment}”
                         <div className="mt-3">
-                          <b>Mike taylor</b>
+                          <b>{testimonial.name}</b>
                           <br />
-                          <small>Mp, India</small>
+                          <small>{testimonial.location}</small>
                         </div>
                       </Card.Text>
                     </Card.Body>
