@@ -32,6 +32,7 @@ function Home() {
 
   const [treatments, setTreatments] = useState([])
   const [testimonials, setTestimonials] = useState([])
+  const [blogs, setBlogs] = useState([])
 
   const settings = {
     dots: true,
@@ -51,6 +52,7 @@ function Home() {
   useEffect(() => {
     getTreatments()
     getTestimonials()
+    getBlogs()
   }, [])
 
   const getTreatments = () => {
@@ -64,6 +66,13 @@ function Home() {
     api
       .get('/testimonials')
       .then(response => setTestimonials(response.data.data.testimonials))
+      .catch(error => console.log(error.response.data.message))
+  }
+
+  const getBlogs = () => {
+    api
+      .get('/blogs')
+      .then(response => setBlogs(response.data.data.docs))
       .catch(error => console.log(error.response.data.message))
   }
 
@@ -347,12 +356,12 @@ function Home() {
           </p>
           <h3 className="text-center">Every Signel Update From Here</h3>
           <Row className="my-3 g-4">
-            {Array.from({ length: 3 }).map((_, idx) => (
-              <Col lg={4}>
+            {blogs.map(blog => (
+              <Col key={blog._id} lg={4}>
                 <Card
                   style={{ boxShadow: "0px 23px 53px rgba(0, 0, 0, 0.12)" }}
                 >
-                  <Card.Img variant="top" src={Blog} className="rounded" />
+                  <Card.Img variant="top" src={`https://skin-sepia.herokuapp.com${blog.thumbnail}`} className="rounded" />
                   <NavLink
                     to="/blogs"
                     className="nav-link"
@@ -361,15 +370,15 @@ function Home() {
                     {" "}
                     <Card.Body style={{ color: "#000" }}>
                       <Card.Title classNam="form-label">
-                        Questions every man wants to ask a dermatologist
+                        {blog.title}
                       </Card.Title>
                       <Card.Text className="mt-3">
                         <small>
-                          <i class="fas fa-stopwatch"></i> January 25, 2021
+                          <i class="fas fa-stopwatch"></i> {new Date(blog.createdAt).toLocaleDateString()}
                         </small>
                         &nbsp;&nbsp;
                         <small>
-                          <i class="far fa-user"></i> Cristofer Westervelt
+                          <i class="far fa-user"></i> {blog.user.name}
                         </small>
                       </Card.Text>
                     </Card.Body>

@@ -1,12 +1,26 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Row, Container, Col, Card, ListGroup } from "react-bootstrap";
 import BlogsLogo from "../Images/blogs-logo.png";
 import Blog from "../Images/blog.png";
 import Bloger from "../Images/bloger.png";
 import { NavLink } from "react-router-dom";
-
+import { api } from '../../config'
  
 function Blogs() {
+
+  const [blogs, setBlogs] = useState([])
+
+  useEffect(() => {
+    const getBlogs = () => {
+      api
+        .get('/blogs')
+        .then(response => setBlogs(response.data.data.docs))
+        .catch(error => console.log(error.response.data.message))
+    }
+
+    getBlogs()
+  }, [])
+
   return (
     <>
       <Container style={{marginTop:'120px'}}>
@@ -26,21 +40,21 @@ function Blogs() {
         <Row>
           <Col>
             <Row /*className="g-4"*/>
-              {Array.from({ length: 6 }).map((_, idx) => (
-                <Col lg={4}>
+              {blogs.map(blog => (
+                <Col key={blog._id} lg={4}>
                   <Card style={{boxShadow: "0px 23px 53px rgba(0, 0, 0, 0.12)",marginBottom:"1rem"}}>
-                    <Card.Img variant="top" src={Blog} className="rounded" />
+                    <Card.Img variant="top" src={`https://skin-sepia.herokuapp.com${blog.thumbnail}`} className="rounded" />
                     <NavLink to="/blogs/blog-details"> <Card.Body style={{color:'#000'}}>
                       <Card.Title classNam="form-label" >
-                        Questions every man wants to ask a dermatologist
+                        {blog.title}
                       </Card.Title>
                       <Card.Text className="mt-3">
                         <small>
-                          <i class="fas fa-stopwatch"></i> January 25, 2021
+                          <i class="fas fa-stopwatch"></i> {new Date(blog.createdAt).toLocaleDateString()}
                         </small>
                         &nbsp;&nbsp;
                         <small>
-                          <i class="far fa-user"></i> Cristofer Westervelt
+                          <i class="far fa-user"></i> {blog.user.name}
                         </small>
                       </Card.Text>
                     </Card.Body></NavLink >
